@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>TSV Großenkneten - Spiele</title>
+  <script
+    type="text/javascript"
+    src="https://www.fussball.de/widgets.js">
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      width: 100%;
+      height: 100%;
+    }
+
+    /*
+      ANPASSUNGSWERTE:
+      --crop-top   = wie viel Pixel oben abgeschnitten werden
+                      (Logoleiste + Überschrift + Filterzeile + Tabellenkopf)
+      --crop-height = wie viel Pixel danach noch sichtbar bleiben
+                      (also die Höhe der 2 gewünschten Spielzeilen)
+      Diese zwei Zahlen ggf. nach einem Screenshot-Test anpassen.
+    */
+    :root {
+      --crop-top: 300px;
+      --crop-height: 260px;
+    }
+
+    #viewport {
+      width: 100vw;
+      height: var(--crop-height);
+      overflow: hidden;
+      position: relative;
+    }
+
+    #shifter {
+      position: absolute;
+      top: calc(-1 * var(--crop-top));
+      left: 0;
+      width: 100%;
+    }
+
+    .fussballde_widget {
+      width: 100% !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewport">
+    <div id="shifter">
+      <div
+        class="fussballde_widget"
+        data-id="20b815e6-a509-4164-8604-5071d31b3a4b"
+        data-type="team-matches"
+        style="width: 100%"
+      ></div>
+    </div>
+  </div>
+</body>
+</html>
