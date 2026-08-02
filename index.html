@@ -40,8 +40,8 @@
     #shifter {
       position: absolute;
       top: calc(-1 * var(--crop-top));
-      left: 0;
-      width: 100%;
+      left: calc(-1 * var(--crop-left));
+      width: calc(100% + var(--crop-left) + var(--crop-right));
     }
 
     .fussballde_widget {
